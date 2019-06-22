@@ -1,0 +1,6 @@
+1. Install dependencies
+2. Setup react and redux
+3. Set up travis & coveralls
+4. Create logic for fetching random number in reducers
+5. Hook up logic with input box for guessing
+6. Create success page and redirect there when a user successfully guesses.
