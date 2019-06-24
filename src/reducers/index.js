@@ -1,7 +1,9 @@
 import { combineReducers } from "redux";
 
-import guess from "./guess";
+import game from "./game";
+import errors from "./errors";
 
 export default combineReducers({
-  guess
+  game,
+  errors
 });
