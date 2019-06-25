@@ -59,6 +59,19 @@ describe("Testing <Home />", () => {
     expect(input.length).toBe(0);
   });
 
+  test("should pass lasterror message as null if there is no message", () => {
+    const store = setUp({
+      game: {
+        success: true
+      },
+      errors: []
+    });
+
+    const wrapper = shallow(<ConnectedHome {...{ store }} />);
+    const errorinput = findByTestAttr(wrapper, "error-message");
+    expect(errorinput.length).toBe(0);
+  });
+
   test("should call setGuess prop on Submit", () => {
     const setGuess = jest.fn();
     const wrapper = shallow(
