@@ -4,7 +4,9 @@ describe("Test game reducer", () => {
   test("should return empty object when nothing is innitialized", () => {
     const newState = gameReducer(undefined, {});
 
-    expect(newState).toEqual({});
+    expect(newState).toEqual({
+      success: false
+    });
   });
   test("should set my guess to the number I guess with", () => {
     const newState = gameReducer(undefined, {
@@ -24,7 +26,8 @@ describe("Test game reducer", () => {
     });
 
     expect(newState).toEqual({
-      randomresult: { type: "uint8", length: 1, data: [153], success: true }
+      randomresult: { type: "uint8", length: 1, data: [153], success: true },
+      success: false
     });
   });
 });

@@ -5,6 +5,8 @@ export default (state = [], action) => {
   switch (action.type) {
     case actionTypes.SET_ERROR:
       return [...state, { message: action.payload, id: uuid4() }];
+    case actionTypes.RESET_ERRORS:
+      return [];
     case actionTypes.REMOVE_ERROR:
       return state.filter(error => error.id !== action.payload);
     default:

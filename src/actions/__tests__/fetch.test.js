@@ -18,7 +18,8 @@ describe("<Fetch />", () => {
     return store.dispatch(fetchRandomNumber()).then(() => {
       const newState = store.getState();
       expect(newState.game).toEqual({
-        randomresult: data
+        randomresult: data,
+        success: false
       });
     });
   });
