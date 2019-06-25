@@ -2,9 +2,6 @@ import axios from "axios";
 
 import actionTypes from "./actionTypes";
 
-//
-// https://qrng.anu.edu.au/API/jsonI.php?length=10&type=hex16&size=2
-
 export const fetchRandomNumber = (size = 1) => {
   return dispatch => {
     return axios
