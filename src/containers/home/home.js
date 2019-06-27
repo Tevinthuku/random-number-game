@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import Successindicator from "../../components/success/success";
 
@@ -18,7 +19,7 @@ export class Home extends Component {
   handleSubmit = event => {
     const { setGuess } = this.props;
     const { guess } = this.state;
-    setGuess(guess);
+    setGuess([guess]);
   };
 
   handleReload = event => {
@@ -58,6 +59,11 @@ export class Home extends Component {
         ) : (
           <Successindicator game={game} playAgain={this.handleReload} />
         )}
+
+        <br />
+        <Link to="/advanced">
+          <button>Play the advanced game</button>
+        </Link>
       </div>
     );
   }

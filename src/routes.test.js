@@ -2,7 +2,7 @@ import React from "react";
 import { shallow } from "enzyme";
 import { Route } from "react-router-dom";
 
-import Routes, { Home, Notfound } from "./routes";
+import Routes, { Home, Notfound, Advanced } from "./routes";
 
 let pathMap = {};
 describe("<Routes />", () => {
@@ -19,5 +19,8 @@ describe("<Routes />", () => {
   });
   test("should render Notfound on an /undefined route", () => {
     expect(pathMap["/undefined"]).toBe(Notfound);
+  });
+  test("should render Advanced on /advanced route", () => {
+    expect(pathMap["/advanced"]).toBe(Advanced);
   });
 });
