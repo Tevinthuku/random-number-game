@@ -87,7 +87,7 @@ describe("Testing <Home />", () => {
     const submitbutton = findByTestAttr(wrapper, "submit-guess");
     submitbutton.simulate("click");
     expect(setGuess).toHaveBeenCalled();
-    expect(setGuess).toBeCalledWith(100);
+    expect(setGuess).toBeCalledWith([100]);
   });
 
   test("should call fetchRandomNumbers on componentDidMount", () => {

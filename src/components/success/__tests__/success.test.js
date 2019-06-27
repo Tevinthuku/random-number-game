@@ -7,7 +7,10 @@ describe("<Success />", () => {
   test("should render success component", () => {
     const playAgain = jest.fn();
     const game = {
-      guess: 123
+      guess: [123],
+      randomresult: {
+        data: [123]
+      }
     };
     const wrapper = shallow(<Success {...{ game, playAgain }} />);
     const replayBtn = findByTestAttr(wrapper, "play-again");
